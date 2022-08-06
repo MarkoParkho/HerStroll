@@ -1,0 +1,46 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	@include adaptiveValue("padding-top", 14, 10);
+	@include adaptiveValue("padding-bottom", 14, 10);
+	@include adaptiveValue("padding-left", 24, 20);
+	@include adaptiveValue("padding-right", 24, 20);
+	gap: rem(16);
+	background: #F681C1;
+	box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+	border-radius: rem(6);
+	color: #fff;
+	transition: 0.3s box-shadow 0s ease;
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0px 6px 20px #F681C1;
+		}
+	}
+	&::before{
+		font-size: rem(24);
+	}
+
+	// .button_transperrant
+	&_transperrant {
+		background: #E5E5E5;
+		color: #747474;
+		@media (any-hover: hover){
+			&:hover{
+				color: #7d6d6d;
+				&::before{
+					color: #7d6d6d;
+				}
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0px 6px 20px #7d6d6d;
+			}
+		}
+
+	}
+}

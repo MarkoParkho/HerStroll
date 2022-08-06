@@ -1,0 +1,61 @@
+.sub-title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
+    /* identical to box height, or 29px */
+
+    letter-spacing: 0.2em;
+
+    color: #9683A0;
+}
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(48);
+    @include adaptiveValue("font-size", 48, 32);
+    line-height: 120%;
+
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+
+    /* Neutral/70 */
+
+    color: #242424;
+    &_s72 {
+        @include adaptiveValue("font-size", 72, 40);
+    }
+    &_s48{
+        @include adaptiveValue("font-size", 48, 32);
+    }
+    &_s32{
+        @include adaptiveValue("font-size", 32, 24);
+    }
+    &_s24{
+        @include adaptiveValue("font-size", 24, 18);
+    }
+    &_s14{
+        @include adaptiveValue("font-size", 14, 12);
+    }
+    &_s20{
+        @include adaptiveValue("font-size", 20, 18);
+    }
+    &_s16{
+        font-size: rem(16);
+    }
+    &_s18{
+        font-size: rem(18);
+        color: #fff;
+    }
+}
+
+.text{
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div( 25, 16);
+    color: #515151;
+    &_16{
+        font-size: rem(16);
+        color: #b9b9b9;
+        line-height: 160%;
+    }
+}
